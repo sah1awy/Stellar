@@ -1,3 +1,41 @@
-<h1>
-    Hello There
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Boston House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="u" placeholder="u" required="required" /><br>
+    	<input type="text" name="g" placeholder="g" required="required" /><br>
+        <input type="text" name="i" placeholder="i" required="required" /><br>
+        <input type="text" name="z" placeholder="z" required="required" /><br>
+        <input type="text" name="run_ID" placeholder="run_ID" required="required" /><br>
+        <input type="text" name="redshift" placeholder="redshift" required="required" /><br>
+        <input type="text" name="plate" placeholder="plate" required="required" /><br>
+        <input type="text" name="MJD" placeholder="MJD" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
