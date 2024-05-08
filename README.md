@@ -9,3 +9,5 @@
 
 Create a new Environment
 ``` conda create -p venv python==3.10 -y ```
+
+[APPLINK](https://stellar-yop5.onrender.com/predict)
